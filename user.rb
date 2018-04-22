@@ -12,18 +12,19 @@ end
 class User
     include DataMapper::Resource
     property :id, Serial
-    property :email, String
+    property :email, Text
     property :password, String
     property :created_at, DateTime
     property :title, String
     property :body, Text
-    property :ptsd, Integer 
+    property :points, Integer 
     property :username, Text
     property :affiliation, Text
     #property :points, Serial
     def login(password)
     	return self.password == password
     end
+
 end
 
 # Perform basic sanity checks and initialize all relationships
