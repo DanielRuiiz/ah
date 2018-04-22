@@ -15,8 +15,6 @@ class User
     property :email, Text
     property :password, String
     property :created_at, DateTime
-    property :title, String
-    property :body, Text
     property :points, Integer 
     property :username, Text
     property :affiliation, Text

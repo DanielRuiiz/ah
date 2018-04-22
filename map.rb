@@ -12,6 +12,8 @@ class Marker
 	property :longitude, Integer
     property :latitude, Integer
     property :created_at, DateTime
+    property :title, String
+    property :body, Text
 
     def marker(x, y)
         longitude = y
