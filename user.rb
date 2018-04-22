@@ -18,6 +18,7 @@ class User
     property :points, Integer 
     property :username, Text
     property :affiliation, Text
+    property :address, Text
     #property :points, Serial
     def login(password)
     	return self.password == password
