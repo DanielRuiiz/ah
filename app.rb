@@ -15,8 +15,19 @@ get "/" do
 	erb :index
 end
 
-
 get "/dashboard" do
 	authenticate!
 	erb :dashboard
+end
+
+get "/leaderboard" do
+	erb :leaderboard
+end
+
+get "/map" do
+	erb :map
+end
+
+get "/new" do
+	erb :new
 end
