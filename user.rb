@@ -15,7 +15,10 @@ class User
     property :email, String
     property :password, String
     property :created_at, DateTime
-
+    property :title, String
+    property :body, Text
+    property :ptsd, Integer 
+    #property :points, Serial
     def login(password)
     	return self.password == password
     end
