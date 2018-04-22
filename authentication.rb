@@ -49,6 +49,8 @@ post "/register" do
 	u.save
 
 	session[:user_id] = u.id
+	session[:user_name] = u.username
+	session[:user_points] = u.points
 
 	erb :"authentication/successful_signup"
 
