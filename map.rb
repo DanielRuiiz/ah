@@ -14,6 +14,8 @@ class Marker
 	property :id, Serial
 	property :longitude, Integer
   property :latitude, Integer
+  property :title, Text
+  property :body, Text
   property :created_at, DateTime
 
     #def marker()
@@ -21,11 +23,9 @@ class Marker
        # latitude = coords.lat
     #end
 end
-
+test = Marker.new
+test.title = "Yes"
+test.body = "I know"
 DataMapper.finalize
 
 Marker.auto_upgrade!
-
-
-
-end

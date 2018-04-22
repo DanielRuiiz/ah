@@ -11,6 +11,12 @@
   <body>
     <h3>Local Area</h3>
     <div id="map"></div>
+		</div>
+		<%@markers = Marker.all %>
+		<% @markers.each do |mark| %>
+		    <h2><%= mark.title %></h2>
+		    <p><%= mark.body %></p>
+		<% end %>
     <script>
       function initMap() {
         var uluru = {lat: 32.779, lng: -96.744}; //Fair Park Dallas
