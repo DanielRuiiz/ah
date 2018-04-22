@@ -1,9 +1,6 @@
 <div class="container">
-	<h1>Dashboard for <%=current_user.id%></h1>
+	<h1>Dashboard for <%=current_user.username%></h1>
 
-	<p>Blah blah blah signed in stuff. 
-		<%= current_user.points%>
-		<%= current_user.created_at%>
-	</p>
-
+	<p> Overview </p>
+		<p1> Current points:<%= current_user.points%></p1>
 </div>

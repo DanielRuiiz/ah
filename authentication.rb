@@ -7,7 +7,6 @@ get "/login" do
 	erb :"authentication/login"
 end
 
-
 post "/process_login" do
 	email = params[:email]
 	password = params[:password]
@@ -34,6 +33,12 @@ get "/sign_up" do
 	erb :"authentication/sign_up"
 end
 
+get "/check" do
+	r = User.all
+	r.each do |x|
+		return x.username
+	end
+end
 
 post "/register" do
 	email = params[:email]
@@ -47,7 +52,7 @@ post "/register" do
 	u.username = username
 	u.points = points
 	u.save
-
+	
 	session[:user_id] = u.id
 	session[:user_name] = u.username
 	session[:user_points] = u.points
