@@ -67,11 +67,13 @@ GEM
     do_sqlite3 (0.10.17-x86-mingw32)
       data_objects (= 0.10.17)
     fastercsv (1.5.5)
+    geocoder (1.4.7)
     json (1.8.6)
     json_pure (1.8.6)
     multi_json (1.13.1)
     mustermann (1.0.2)
     nokogiri (1.5.6)
+    nokogiri (1.5.6-x86-mingw32)
     pg (1.0.0)
     pg (1.0.0-x86-mingw32)
     public_suffix (3.0.2)
@@ -95,6 +97,7 @@ DEPENDENCIES
   data_mapper
   dm-postgres-adapter
   dm-sqlite-adapter
+  geocoder
   nokogiri
   pg
   sinatra

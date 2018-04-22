@@ -12,8 +12,7 @@
     <h3>Local Area</h3>
     <div id="map"></div>
 		</div>
-		<%@markers = Marker.all %>
-		<% @markers.each do |mark| %>
+		<%@markers.each do |mark| %>
 		    <h2><%= mark.title %></h2>
 		    <p><%= mark.body %></p>
 		<% end %>

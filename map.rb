@@ -1,6 +1,4 @@
 require	'data_mapper'
-require 'geokit'
-include Geokit::Geocoders
 
 if ENV['DATABASE_URL']
   DataMapper::setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
@@ -9,7 +7,7 @@ else
 end
 
 
-class Marker
+class Mark
 	include DataMapper::Resource
 	property :id, Serial
 	property :longitude, Integer
@@ -23,9 +21,9 @@ class Marker
        # latitude = coords.lat
     #end
 end
-test = Marker.new
+test = Mark.new
 test.title = "Yes"
 test.body = "I know"
 DataMapper.finalize
 
-Marker.auto_upgrade!
+Mark.auto_upgrade!

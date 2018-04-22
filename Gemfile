@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'data_mapper'
 gem 'nokogiri'
+gem 'geocoder'
 group :development do
  
   gem "dm-sqlite-adapter"
