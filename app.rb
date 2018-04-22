@@ -6,6 +6,7 @@ require 'geocoder'
 
 get "/" do
 	erb :index
+	#@markers = Marker.all
 end
 
 get "/dashboard" do
@@ -14,6 +15,7 @@ get "/dashboard" do
 end
 
 get "/leaderboard" do
+	@users = User.all
 	erb :leaderboard
 end
 

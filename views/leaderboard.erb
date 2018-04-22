@@ -4,6 +4,16 @@
                 <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 55px;" aria-sort="descending">Name</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Affiliation: activate to sort column ascending" style="width: 63px;">Affiliation</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 48px;">Location</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Points: activate to sort column ascending" style="width: 48px;">Points</th></tr>
               </thead>
               <tbody>
+                <%@users.sort%>
+                <%@users.each do |user|%>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1"><%=user.username%></td>
+                    <td><%=user.affiliation%></td>
+                    <td>San Francisco</td>
+                    <td><%=user.points%></td>
+                  </tr>
+                <% end %>
+                <!-- 
               <tr role="row" class="odd">
                   <td class="sorting_1">Zorita Serrano</td>
                   <td>Software Engineer</td>
@@ -54,5 +64,5 @@
                   <td>Developer</td>
                   <td>London</td>
                   <td>53</td>
-                </tr></tbody>
+                </tr> --></tbody>
             </table></div></div>

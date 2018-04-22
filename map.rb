@@ -11,10 +11,10 @@ class Mark
 	include DataMapper::Resource
 	property :id, Serial
 	property :longitude, Integer
-  property :latitude, Integer
-  property :title, Text
-  property :body, Text
-  property :created_at, DateTime
+    property :latitude, Integer
+    property :title, Text
+    property :body, Text
+    property :created_at, DateTime
 
     #def marker()
       #  longitude = coords.lng

@@ -26,32 +26,11 @@ class User
 
 end
 #@users_by_point_count = User.all(:order => [:points.desc])
+
+
+test = User.new
+test.affiliation = "teacher"
+test.points = 10
+
 DataMapper.finalize
 User.auto_upgrade!
-
-
-#class Marker
- #   include DataMapper::Resource
-  #  property :id, Serial
-   # property :longitude, Integer
-  #property :latitude, Integer
-  #property :created_at, DateTime
-
-    #def marker()
-      #  longitude = coords.lng
-       # latitude = coords.lat
-    #end
-#end
-
-#DataMapper.finalize
-
-
-
-# Perform basic sanity checks and initialize all relationships
-# Call this when you've defined all your models
-
-
-# automatically create the post table
-
-#Marker.auto_upgrade!
-
